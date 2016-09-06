@@ -20,14 +20,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("MainActivity", "onCreate");
-        setContentView(R.layout.activity_main_solution_1);
-        //setContentView(R.layout.activity_main_solution_2);
+        //setContentView(R.layout.activity_main_solution_1);
+        setContentView(R.layout.activity_main_solution_2);
 
         toolbar = (Toolbar) findViewById(R.id.activity_toolbar);
         drawer = new DrawerBuilder().withActivity(this).withToolbar(toolbar).build();
 
         //we have to make the StatusBar of the coordinatorLayout transparent as it will drawer over our background otherwise
-        ((CoordinatorLayout)findViewById(R.id.coordinatorLayout)).setStatusBarBackgroundColor(Color.TRANSPARENT);
+        ((CoordinatorLayout)findViewById(R.id.coordinatorLayout)).setStatusBarBackgroundColor(Color.parseColor("#44000000"));
     }
 
     @Override
